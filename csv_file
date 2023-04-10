@@ -1,7 +1,10 @@
 import csv
-with open('test1.csv','r') as csv_file:
-    csv_reader=csv.reader(csv_file)
-    print(csv_reader)
 
+with open('C:\\Users\\Dell\\OneDrive\\Desktop\\MINI PROJECT\\test1.csv') as csvfile:
+    csv_reader= csv.reader(csvfile)
+    # for row in csv_reader:
+    #     print(row)
+    # print(csv_reader)
+     
     for line in csv_reader:
         print(line)
