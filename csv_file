@@ -1,10 +1,16 @@
+#step 1: import the csv module
 import csv
 
+# step 2: open the csv file with reader method to read the file:
 with open('C:\\Users\\Dell\\OneDrive\\Desktop\\MINI PROJECT\\test1.csv') as csvfile:
     csv_reader= csv.reader(csvfile)
     # for row in csv_reader:
     #     print(row)
     # print(csv_reader)
+
+#step 3:for writing the csv file use writer method with delimiters:
+    with open('C:\\Users\\Dell\\OneDrive\\Desktop\\MINI PROJECT\\test1.csv','w') as new_file:
+        csv_writer=csv.writer(new_file,delimiter="/")
      
-    for line in csv_reader:
-        print(line)
+        for line in csv_reader:
+            csv_writer.writerow(line)
